@@ -1,0 +1,27 @@
+Frontend:
+
+Install Node.js and npm from https://nodejs.org.
+Download or clone the project source code from https://github.com/cornflourblue/react-18-redux-registration-login-example
+Install all required npm packages by running npm install from the command line in the project root folder (where the package.json is located).
+Start the application by running npm start from the command line in the project root folder.
+The browser should automatically launch the application at http://localhost:3000
+
+
+Backend:
+
+Install MySQL Community Server from https://dev.mysql.com/downloads/mysql/ and ensure it is started. Installation instructions are available at https://dev.mysql.com/doc/refman/8.0/en/installing.html.
+Download or clone the project source code from file
+Install all required npm packages by running npm install or npm i from the command line in the project root folder (where the package.json is located).
+Start the api by running npm start from the command line in the project root folder, you should see the message Server listening on port 4000.
+Back in the React + Redux example app, remove or comment out the 2 lines below the comment // setup fake backend located in the /src/index.js file, then start the React app and it should now be hooked up with the Node + MySQL API.
+
+Docker and Docker-Compose:
+In root dir, type;
+
+# Build the Docker containers
+docker-compose build
+
+# Start the Docker containers
+docker-compose up
+
+

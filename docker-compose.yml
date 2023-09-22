@@ -1,0 +1,29 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./backend-node-mysql-registration-api
+    ports:
+      - "4000:4000"  # Map the container's port to your local machine
+  
+  frontend:
+    build:
+      context: ./frontend-react-18-redux-registration
+    ports:
+      - "3000:3000"  # Map the container's port to your local machine
+    depends_on:
+      - backend
+
+
+  # Your existing services go here
+
+  mysql:
+    image: mysql:latest
+    container_name: my-mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: nodedb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root123
+    ports:
+      - "3306:3306"
